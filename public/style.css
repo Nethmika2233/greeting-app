@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1f2253, #0b0d26 70%);
+  color: white;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 650px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 32px;
+  padding: 50px 40px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+}
+
+.card h1 {
+  font-size: 64px;
+  color: #9b7bff;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: 28px;
+  color: #b8bfdc;
+  margin-bottom: 35px;
+  line-height: 1.4;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+input {
+  width: 100%;
+  padding: 22px 24px;
+  border-radius: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  color: white;
+  font-size: 28px;
+  outline: none;
+}
+
+input::placeholder {
+  color: #8f95b2;
+}
+
+input:focus {
+  border-color: #7c6cff;
+  box-shadow: 0 0 0 4px rgba(124, 108, 255, 0.15);
+}
+
+button,
+.back-link {
+  display: inline-block;
+  width: 100%;
+  padding: 22px;
+  border: none;
+  border-radius: 18px;
+  background: linear-gradient(to right, #5d5fef, #7d6cff);
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+button:hover,
+.back-link:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+.result-title {
+  font-size: 64px;
+  color: #9b7bff;
+  margin-bottom: 35px;
+  font-weight: 700;
+}
+
+.small-space {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 35px 24px;
+    border-radius: 24px;
+  }
+
+  .card h1,
+  .result-title {
+    font-size: 42px;
+  }
+
+  .card p,
+  input,
+  button,
+  .back-link {
+    font-size: 20px;
+  }
+}
